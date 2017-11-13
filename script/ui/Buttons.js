@@ -38,7 +38,8 @@ this.playbtn = game.add.button(game.world.centerX,game.world.centerY,'play',this
         handlePlay: function(){
             // run the play (core) state
             game.global.menuBgSound.stop();
-            game.state.start('Play');
+           document.querySelectorAll('.buy-quarters-button')[0].click();
+            // game.state.start('Play');
         },
         
         handleHelp: function(){
@@ -72,6 +73,12 @@ this.playbtn = game.add.button(game.world.centerX,game.world.centerY,'play',this
         
         
     }
-    
+
+window.onQuartersCallback = function(data){ 
+  console.log(data.txId);
+  game.state.start('Play');
+  window.focus();
+
+ }    
     
     

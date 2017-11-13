@@ -61,7 +61,7 @@ leaderboardState.prototype = {
 		scoreText.setShadow(2, 2, 'rgba(0,0,0,0.5)', 2);		    
                    
 this.restartBtn = game.add.button(60,game.height-40,'restartBtn',function(){
-this.game.state.start('Play');
+document.querySelectorAll('.buy-quarters-button')[0].click();
 },this);
         this.restartBtn.anchor.setTo(0.5,0.5);
         this.restartBtn.scale.setTo(0.5,0.5);
