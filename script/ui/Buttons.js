@@ -76,9 +76,9 @@ this.playbtn = game.add.button(game.world.centerX,game.world.centerY,'play',this
 
 window.onQuartersCallback = function(data){ 
   console.log(data.txId);
-  game.state.start('Play');
-  window.focus();
-
- }    
-    
+  if (data.txId != undefined) {
+    game.state.start('Play');
+    window.focus();
+  }   
+} 
     
